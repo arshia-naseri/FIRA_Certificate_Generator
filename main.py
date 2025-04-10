@@ -12,8 +12,8 @@ if __name__ == "__main__":
         print("2- Generate Awards")
         print("3- Generate Badges")
         print("4- Exit Program")
-        # inp = input(">> ").strip()
-        inp = "1"
+        inp = input(">> ").strip()
+        
 
         if inp == "1":     # participants
             part = Participants(pd.read_excel(excel_file_name, sheet_name="participants"))

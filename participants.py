@@ -49,6 +49,8 @@ class Participants:
         plt.show()
 
     def generateCertificates(self):
+        print("\nParticipant Certification")
+        print(5*"-")
         counter = 1
         for name, league, team, role in zip(self.df["Name"], self.df["League"], self.df["Team Name"], self.df["Member Type"]):
             # Text Positions
@@ -95,3 +97,5 @@ class Participants:
             # self.show_preview(img)
             img.save(f"{self.output_dir}/certificate_participant_{counter}.png", dpi=self.dpi)
             counter += 1
+        
+        print(f"===== Total No. of {counter}(s) certificate of participation generated =====\n")
