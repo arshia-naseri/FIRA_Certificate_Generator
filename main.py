@@ -1,5 +1,6 @@
 # main.py
 from participants import Participants
+from awards import Awards
 import pandas as pd
 
 excel_file_name = "dummy_list.xlsx"
@@ -16,10 +17,11 @@ if __name__ == "__main__":
         
 
         if inp == "1":     # participants
-            part = Participants(pd.read_excel(excel_file_name, sheet_name="participants"))
-            print(part.generateCertificates())
+            cert = Participants(pd.read_excel(excel_file_name, sheet_name="participants"))
+            cert.generateCertificates()
         elif inp == "2":   # Awards
-            print("Awards")
+            cert = Awards(pd.read_excel(excel_file_name, sheet_name="awards"))
+            cert.generateCertificates()
         elif inp == "3":   # Badges
             print("Badges")
         elif inp == "4":
