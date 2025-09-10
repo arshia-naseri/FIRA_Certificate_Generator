@@ -98,7 +98,7 @@ class Awards:
             draw.text((title_box_x, title_y), title, stroke_width=0.5, font=title_font, fill="black")
             
             print(f"{counter}-{name}-{title}")
-            img.save(f"{self.output_dir}/certificate_participant_{counter}.png", dpi=self.dpi)
+            img.save(f"{self.output_dir}/awards_certification_{counter}.webp", dpi=self.dpi, format="webp")
             counter += 1
         
-        print(f"===== Total No. of {counter}(s) certificate of participation generated =====\n")
+        print(f"===== Total No. of {counter}(s) Awards generated =====\n")

@@ -20,8 +20,8 @@ if __name__ == "__main__":
             cert = Participants(pd.read_excel(excel_file_name, sheet_name="participants"))
             cert.generate()
         elif inp == "2":   # Awards
-            cert = Awards(pd.read_excel(excel_file_name, sheet_name="awards"))
-            cert.generate()
+            award = Awards(pd.read_excel(excel_file_name, sheet_name="awards"))
+            award.generate()
         elif inp == "3":   # Badges
             df_part = pd.read_excel(excel_file_name, sheet_name="participants") #Member, Mentor
             df_others = pd.read_excel(excel_file_name, sheet_name="badge") #Vip, Org, Tc

@@ -95,7 +95,7 @@ class Participants:
 
             print(f"{counter}-{name}-{league}")
             # self.show_preview(img)
-            img.save(f"{self.output_dir}/certificate_participant_{counter}.png", dpi=self.dpi)
+            img.save(f"{self.output_dir}/certificate_participant_{counter}.webp", dpi=self.dpi, format="webp")
             counter += 1
         
         print(f"===== Total No. of {counter}(s) certificate of participation generated =====\n")
