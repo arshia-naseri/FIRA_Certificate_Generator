@@ -48,7 +48,7 @@ class Awards:
         plt.axis('off') 
         plt.show()
 
-    def generateCertificates(self):
+    def generate(self):
         print("\nAward Certification")
         print(5*"-")
         counter = 1

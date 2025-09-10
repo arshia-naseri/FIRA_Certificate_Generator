@@ -1,6 +1,7 @@
 # main.py
 from participants import Participants
 from awards import Awards
+from badges import Badges
 import pandas as pd
 
 excel_file_name = "dummy_list.xlsx"
@@ -14,20 +15,21 @@ if __name__ == "__main__":
         print("3- Generate Badges")
         print("4- Exit Program")
         inp = input(">> ").strip()
-        
 
         if inp == "1":     # participants
             cert = Participants(pd.read_excel(excel_file_name, sheet_name="participants"))
-            cert.generateCertificates()
+            cert.generate()
         elif inp == "2":   # Awards
             cert = Awards(pd.read_excel(excel_file_name, sheet_name="awards"))
-            cert.generateCertificates()
+            cert.generate()
         elif inp == "3":   # Badges
-            print("Badges")
+            df_part = pd.read_excel(excel_file_name, sheet_name="participants") #Member, Mentor
+            df_others = pd.read_excel(excel_file_name, sheet_name="badge") #Vip, Org, Tc
+            df_all = pd.concat([df_part, df_others],ignore_index=True)
+            badg = Badges(df_all)
+            badg.generate()
         elif inp == "4":
             break
         else:
             print(">> ERROR: Wrong Input. Try Again")
-        
-        break
         print(5*"-")

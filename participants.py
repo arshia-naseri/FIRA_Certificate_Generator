@@ -48,7 +48,7 @@ class Participants:
         plt.axis('off') 
         plt.show()
 
-    def generateCertificates(self):
+    def generate(self):
         print("\nParticipant Certification")
         print(5*"-")
         counter = 1
