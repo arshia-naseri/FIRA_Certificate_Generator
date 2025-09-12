@@ -1,6 +1,6 @@
 # 2<sup>nd</sup> FIRA 2025 Certificate & Badge Generator 🏅
-
-> ⚠️ The following Excel data, certificates, and generated badges are fictional and do not represent real individuals.
+> [!Warning] 
+> The following Excel data, certificates, and generated badges are fictional and do not represent real individuals.
 
 ## Overview ✨
 
